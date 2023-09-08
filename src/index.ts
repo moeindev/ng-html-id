@@ -3,6 +3,8 @@ import {COMMANDER_CONST} from "./general.const";
 import {ConfigUtil} from "./utils/config.util";
 import figlet from 'figlet';
 import {Command} from "commander";
+import {addHtmlIds} from "./add-meta";
+import CLIInfinityProgress from "cli-infinity-progress";
 
 console.log(figlet.textSync(COMMANDER_CONST.name));
 const program = new Command();
@@ -20,4 +22,8 @@ if (ConfigUtil.isConfigurationFileExists(configurationPath)) {
     console.info(COMMANDER_CONST.commands[0].error);
 }
 
-console.log('config', ConfigUtil.getConfiguration(configurationPath));
+
+const progress = new CLIInfinityProgress().setHeader('Finding components');
+
+
+addHtmlIds(progress);

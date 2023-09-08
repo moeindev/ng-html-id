@@ -8,6 +8,8 @@ const general_const_1 = require("./general.const");
 const config_util_1 = require("./utils/config.util");
 const figlet_1 = __importDefault(require("figlet"));
 const commander_1 = require("commander");
+const add_meta_1 = require("./add-meta");
+const cli_infinity_progress_1 = __importDefault(require("cli-infinity-progress"));
 console.log(figlet_1.default.textSync(general_const_1.COMMANDER_CONST.name));
 const program = new commander_1.Command();
 const command = program
@@ -22,4 +24,5 @@ if (config_util_1.ConfigUtil.isConfigurationFileExists(configurationPath)) {
 else {
     console.info(general_const_1.COMMANDER_CONST.commands[0].error);
 }
-console.log('config', config_util_1.ConfigUtil.getConfiguration(configurationPath));
+const progress = new cli_infinity_progress_1.default().setHeader('Finding components');
+(0, add_meta_1.addHtmlIds)(progress);
