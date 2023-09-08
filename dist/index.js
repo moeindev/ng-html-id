@@ -11,6 +11,8 @@ const commander_1 = require("commander");
 const add_meta_1 = require("./add-meta");
 const cli_infinity_progress_1 = __importDefault(require("cli-infinity-progress"));
 console.log(figlet_1.default.textSync(general_const_1.COMMANDER_CONST.name));
+console.info('\n');
+console.info('\n');
 const program = new commander_1.Command();
 const command = program
     .version(general_const_1.COMMANDER_CONST.version)
@@ -18,6 +20,8 @@ const command = program
     .option(general_const_1.COMMANDER_CONST.commands[0].command, general_const_1.COMMANDER_CONST.commands[0].description)
     .parse(process.argv);
 let configurationPath = command.getOptionValue(general_const_1.COMMANDER_CONST.commands[0].command);
+console.info('\n');
+console.info('\n');
 if (config_util_1.ConfigUtil.isConfigurationFileExists(configurationPath)) {
     console.info('Configuration found, proceeding...');
 }

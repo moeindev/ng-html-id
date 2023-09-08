@@ -7,6 +7,9 @@ import {addHtmlIds} from "./add-meta";
 import CLIInfinityProgress from "cli-infinity-progress";
 
 console.log(figlet.textSync(COMMANDER_CONST.name));
+console.info('\n');
+console.info('\n');
+
 const program = new Command();
 const command = program
     .version(COMMANDER_CONST.version)
@@ -16,6 +19,8 @@ const command = program
 
 let configurationPath = command.getOptionValue(COMMANDER_CONST.commands[0].command);
 
+console.info('\n');
+console.info('\n');
 if (ConfigUtil.isConfigurationFileExists(configurationPath)) {
     console.info('Configuration found, proceeding...');
 } else {
