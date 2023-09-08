@@ -1,8 +1,12 @@
-import * as commander from 'commander';
+#!/usr/bin/env node
 import {COMMANDER_CONST} from "./general.const";
 import {ConfigUtil} from "./utils/config.util";
+import figlet from 'figlet';
+import {Command} from "commander";
 
-const command = commander.createCommand(COMMANDER_CONST.name)
+console.log(figlet.textSync(COMMANDER_CONST.name));
+const program = new Command();
+const command = program
     .version(COMMANDER_CONST.version)
     .description(COMMANDER_CONST.description)
     .option(COMMANDER_CONST.commands[0].command, COMMANDER_CONST.commands[0].description)
