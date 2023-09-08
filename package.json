@@ -6,7 +6,8 @@
   "scripts": {
     "build": "npx tsc",
     "local-verdaccio-publish": "npm publish --registry http://localhost:4873",
-    "local-verdaccio-unpublish": "npm unpublish --force --registry http://localhost:4873"
+    "local-verdaccio-unpublish": "npm unpublish --force --registry http://localhost:4873",
+    "build-and-publish-locally": "npm run build && npm run local-verdaccio-unpublish && npm run local-verdaccio-publish"
   },
   "bin": {
     "ng-html-id": "./dist/index.js"

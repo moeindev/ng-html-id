@@ -13,16 +13,11 @@ const command = program
     .parse(process.argv);
 
 let configurationPath = command.getOptionValue(COMMANDER_CONST.commands[0].command);
-if (!configurationPath) {
-    console.info(COMMANDER_CONST.commands[0].error);
-    configurationPath = './default-configuration.json';
-}
 
 if (ConfigUtil.isConfigurationFileExists(configurationPath)) {
     console.info('Configuration found, proceeding...');
 } else {
-    console.info('Configuration not found! exiting');
-    process.exit();
+    console.info(COMMANDER_CONST.commands[0].error);
 }
 
-console.log(ConfigUtil.getConfiguration(configurationPath));
+console.log('config', ConfigUtil.getConfiguration(configurationPath));
