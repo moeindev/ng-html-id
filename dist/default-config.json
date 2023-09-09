@@ -1,3 +1,9 @@
 {
-    "projectName": "ng-html"
+    "projectName": "ng-html",
+    "elementSuffixes": {
+        "button": "btn",
+        "div": "container",
+        "input": "input",
+        "p-button": "btn"
+    }
 }
