@@ -5,8 +5,8 @@ export const COMMANDER_CONST = {
     version: '1.0.0',
     commands: [
         {
-            command: '-config',
-            description: '-config <path> Define the project name for the prefix, default value is => ng-html-id',
+            command: '-C, --config <path>',
+            description: '-C, --config <path> Define the project name for the prefix, default value is => ng-html-id',
             error: 'No config passed here! using default configuration'
         }
     ]
