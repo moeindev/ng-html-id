@@ -1,7 +1,7 @@
 import {FileUtil} from "./utils/file.util";
 import CLIInfinityProgress from "cli-infinity-progress";
 import {ConfigUtil} from "./utils/config.util";
-import {ComponentModel} from "./model/component.model";
+import {Component} from "./model/component.model";
 import {HtmlUtil} from "./utils/html.util";
 
 
@@ -22,7 +22,7 @@ export function addHtmlIds(configurationPath: string, progress: CLIInfinityProgr
 }
 
 
-export function showComponentsInfo(components: ComponentModel[]) {
+export function showComponentsInfo(components: Component[]) {
     setTimeout(() => {
         console.info('\n');
         console.info('\n');

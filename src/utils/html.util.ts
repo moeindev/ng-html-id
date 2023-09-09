@@ -1,10 +1,10 @@
 import * as fs from 'fs';
-import {ComponentModel} from "../model/component.model";
+import {Component} from "../model/component.model";
 import {Configuration} from "../model/configuration.model";
 import { load } from "cheerio";
 
 export class HtmlUtil {
-    public static addIdsToElements(component: ComponentModel, configuration: Configuration) {
+    public static addIdsToElements(component: Component, configuration: Configuration) {
         if (component && component.selector && component.htmlFile && component.componentName) {
             const htmlFileContent = fs.readFileSync(component.htmlFile, 'utf-8');
             const loadedHtml = load(htmlFileContent);

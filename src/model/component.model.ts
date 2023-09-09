@@ -1,5 +1,5 @@
 
-export interface ComponentModel {
+export interface Component {
     selector?: string;
     htmlFile?: string;
     componentName?: string;

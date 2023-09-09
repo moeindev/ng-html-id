@@ -1,11 +1,11 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import {ComponentModel} from "../model/component.model";
+import {Component} from "../model/component.model";
 
 export class FileUtil {
-    public static findComponentFiles(directory: string): ComponentModel[] {
+    public static findComponentFiles(directory: string): Component[] {
         const files = fs.readdirSync(directory);
-        const componentFiles: ComponentModel[] = [];
+        const componentFiles: Component[] = [];
 
         files.forEach((file) => {
             const filePath = path.join(directory, file);
