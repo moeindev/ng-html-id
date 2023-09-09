@@ -1,5 +1,5 @@
 {
-  "name": "ng-html-id",
+  "name": "@moeindeveloper/ng-html-id",
   "version": "1.0.0",
   "description": "An helpful HTML id generator for angular projects",
   "main": "src/index.js",
