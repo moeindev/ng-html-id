@@ -29,4 +29,4 @@ if (ConfigUtil.isConfigurationFileExists(configurationPath)) {
 const progress = new CLIInfinityProgress().setHeader('Finding components');
 
 
-addHtmlIds(progress);
+addHtmlIds(configurationPath, progress);
