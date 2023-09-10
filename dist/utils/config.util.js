@@ -45,7 +45,6 @@ class ConfigUtil {
             console.error(err);
             process.exit();
         }
-        return undefined;
     }
 }
 exports.ConfigUtil = ConfigUtil;

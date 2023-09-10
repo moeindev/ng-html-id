@@ -1,5 +1,5 @@
 {
-  "name": "ng-html-id",
+  "name": "@moeindeveloper/ng-html-id",
   "version": "1.0.0",
   "description": "An helpful HTML id generator for angular projects",
   "main": "src/index.js",
@@ -19,12 +19,13 @@
     "@types/commander": "^2.12.2",
     "@types/figlet": "^1.5.6",
     "@types/node": "^20.5.9",
-    "cheerio": "^1.0.0-rc.12",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "cli-infinity-progress": "^0.6.7",
     "commander": "^11.0.0",
-    "figlet": "^1.6.0"
+    "figlet": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12"
   }
 }
