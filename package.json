@@ -2,6 +2,7 @@
   "name": "@moeindeveloper/ng-html-id",
   "version": "1.0.0",
   "description": "An helpful HTML id generator for angular projects",
+  "repository": "https://github.com/moeindev/ng-html-id",
   "main": "src/index.js",
   "scripts": {
     "build": "npx tsc",
